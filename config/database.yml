@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  username: wing_clip
+  password:
+  encoding: unicode
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS', 16) %>
+
+development:
+  <<: *default
+  database: wing_clip_development
+
+test:
+  <<: *default
+  database: wing_clip_test
+
+production:
+  <<: *default
+  database: <%= ENV.fetch('DATABASE_NAME', 'wing_clip_production') %>
+  host:     <%= ENV.fetch('DATABASE_HOST', 'localhost') %>
+  pool:     <%= ENV.fetch('DATABASE_POOL') { ENV.fetch('RAILS_MAX_THREADS', 25) } %>
+  username: <%= ENV.fetch('DATABASE_USERNAME', 'wing_clip') %>
+  password: <%= ENV.fetch('DATABASE_PASSWORD', '') %>
