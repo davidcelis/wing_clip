@@ -9,7 +9,7 @@ module Foursquare
     # The user's email address
     attr_reader :email
 
-    def new(attributes)
+    def initialize(attributes)
       @id = attributes['id']
       @name = [attributes['firstName'], attributes['lastName']].compact.join(' ')
       @email = attributes.dig('contact', 'email')

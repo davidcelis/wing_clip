@@ -16,7 +16,7 @@ module Foursquare
     # When the user checked in
     attr_reader :created_at
 
-    def new(attributes)
+    def initialize(attributes)
       @message    = attributes['shout']
       @venue      = attributes.dig('venue', 'name')
       @address    = attributes.dig('venue', 'location', 'formattedAdress').join(', ')
