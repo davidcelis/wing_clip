@@ -14,7 +14,8 @@ module HasEncryptedAttributes
         return unless self.public_send("encrypted_#{attribute}?")
         return instance_variable_get(:"@#{attribute}") if instance_variable_defined?(:"@#{attribute}")
 
-        instance_variable_set(:"@#{attribute}", self.class.encryptor.decrypt_and_verify(encrypted_foursquare_token))
+        value = self.public_send("encrypted_#{attribute}")
+        instance_variable_set(:"@#{attribute}", self.class.encryptor.decrypt_and_verify(value))
       end
 
       define_method "#{attribute}=" do |value|

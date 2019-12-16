@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(version: 2019_12_01_215414) do
     t.text "foursquare_name"
     t.text "foursquare_email"
     t.text "encrypted_foursquare_token"
+    t.text "google_email_address"
+    t.text "encrypted_google_id_token"
+    t.text "encrypted_google_access_token"
+    t.text "encrypted_google_refresh_token"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

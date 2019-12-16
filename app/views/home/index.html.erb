@@ -1,5 +1,11 @@
 <% if signed_in_with_foursquare? %>
-  You're signed into Foursquare. Welcome back, <%= current_user.foursquare_name %>!
+  <p>Signed into Foursquare as <%= current_user.foursquare_name %> (User ID: <%= current_user.foursquare_id %>)</p>
+
+  <% if signed_in_with_google? %>
+    <p>Signed into Google as <%= current_user.google_email_address %></p>
+  <% else %>
+    <%= link_to 'Sign in with Google', oauth_google_authenticate_url %>
+  <% end %>
 <% else %>
-  <%= link_to 'Sign in with Foursquare', foursquare_oauth_url %>
+  <%= link_to 'Sign in with Foursquare', oauth_foursquare_authenticate_url %>
 <% end %>

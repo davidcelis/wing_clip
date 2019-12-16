@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   namespace :oauth do
     get 'foursquare/authenticate'
     get 'foursquare/callback'
+
+    get 'google/authenticate'
+    get 'google/callback'
   end
 end
