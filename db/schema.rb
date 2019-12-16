@@ -16,16 +16,16 @@ ActiveRecord::Schema.define(version: 2019_12_01_215414) do
   enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
-    t.integer "foursquare_id"
+    t.integer "foursquare_id", null: false
     t.text "foursquare_name"
     t.text "foursquare_email"
     t.text "encrypted_foursquare_token"
     t.text "google_email_address"
-    t.text "encrypted_google_id_token"
-    t.text "encrypted_google_access_token"
-    t.text "encrypted_google_refresh_token"
+    t.text "encrypted_google_credentials"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["foursquare_id"], name: "index_users_on_foursquare_id", unique: true
+    t.index ["google_email_address"], name: "index_users_on_google_email_address", unique: true
   end
 
 end

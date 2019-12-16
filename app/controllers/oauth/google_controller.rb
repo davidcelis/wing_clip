@@ -12,18 +12,16 @@ class OAuth::GoogleController < ApplicationController
   end
 
   def callback
-    client      = Signet::OAuth2::Client.new(client_options)
+    client = Signet::OAuth2::Client.new(client_options)
     client.code = params[:code]
-    response    = client.fetch_access_token!
 
-    current_user.assign_attributes(
-      google_id_token:      response['id_token'],
-      google_access_token:  response['access_token'],
-      google_refresh_token: response['refresh_token'],
+    current_user.google_credentials = client.fetch_access_token!
+
+    service = Google::Apis::Oauth2V2::Oauth2Service.new
+    response = service.tokeninfo(
+      access_token: current_user.google_credentials['access_token'],
+      id_token: current_user.google_credentials['id_token'],
     )
-
-    service  = Google::Apis::Oauth2V2::Oauth2Service.new
-    response = service.tokeninfo(access_token: response['access_token'], id_token: response['id_token'])
 
     current_user.google_email_address = response.email
     current_user.save!

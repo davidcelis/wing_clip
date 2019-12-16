@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   def signed_in_with_google?
     return unless signed_in_with_foursquare?
 
-    current_user.google_access_token?
+    current_user.google_credentials?
   end
   helper_method :signed_in_with_google?
 
