@@ -27,7 +27,7 @@ module HasEncryptedAttributes
         end
       end
 
-      define_method "#{attribute}?" { public_send("encrypted_#{attribute}?") }
+      define_method("#{attribute}?") { public_send("encrypted_#{attribute}?") }
     end
 
     def encryptor

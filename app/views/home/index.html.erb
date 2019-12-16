@@ -1,0 +1,5 @@
+<% if signed_in_with_foursquare? %>
+  You're signed into Foursquare. Welcome back, <%= current_user.foursquare_name %>!
+<% else %>
+  <%= link_to 'Sign in with Foursquare', foursquare_oauth_url %>
+<% end %>

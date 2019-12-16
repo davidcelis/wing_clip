@@ -19,6 +19,10 @@ class OAuth::FoursquareController < ApplicationController
     user = User.find_or_initialize_by(foursquare_id: foursquare_user.id)
     user.assign_attributes(foursquare_name: foursquare_user.name, foursquare_email: foursquare_user.email)
     user.save!
+
+    cookies.encrypted.permanent[:foursquare_id] = user.foursquare_id
+
+    redirect_to root_url
   end
 
   private
