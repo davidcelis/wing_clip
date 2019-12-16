@@ -1,5 +1,8 @@
 module Foursquare
   class CheckIn
+    # Foursquare's unique identifier for this check-in
+    attr_reader :id
+
     # The comment the user left when checking in, if present
     attr_reader :message
 
@@ -13,15 +16,21 @@ module Foursquare
     attr_reader :latitude
     attr_reader :longitude
 
+    # Whether or not the user was mayor when they checked in
+    attr_reader :mayor
+    alias_method :mayor?, :mayor
+
     # When the user checked in
     attr_reader :created_at
 
     def initialize(attributes)
+      @id         = attributes['id']
       @message    = attributes['shout']
       @venue      = attributes.dig('venue', 'name')
-      @address    = attributes.dig('venue', 'location', 'formattedAdress').join(', ')
+      @address    = attributes.dig('venue', 'location', 'formattedAddress').join(', ')
       @latitude   = attributes.dig('venue', 'location', 'lat')
       @longitude  = attributes.dig('venue', 'location', 'lng')
+      @mayor      = attributes['isMayor']
       @created_at = Time.at(attributes['createdAt'])
     end
   end

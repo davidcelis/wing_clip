@@ -30,11 +30,10 @@ module Foursquare
       Foursquare::User.new(body.dig('response', 'user'))
     end
 
-    def check_ins(limit: 250, offset: 0)
+    def check_ins(limit: 250, before: Time.zone.now.to_i)
       params = default_params.merge(
         limit:  limit,
-        offset: offset,
-        sort:   'oldestfirst',
+        beforeTimestamp: before,
       )
 
       response = get("#{API_URL}/users/self/checkins", params: params)
