@@ -4,7 +4,7 @@ require 'rails'
 
 # Pick the frameworks you want:
 require 'active_model/railtie'
-require 'active_job/railtie'
+# require 'active_job/railtie'
 require 'active_record/railtie'
 # require 'active_storage/engine'
 require 'action_controller/railtie'
@@ -29,6 +29,7 @@ module WingClip
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+    config.eager_load_paths << Rails.root.join('app', 'workers')
     config.eager_load_paths << Rails.root.join('lib')
   end
 end

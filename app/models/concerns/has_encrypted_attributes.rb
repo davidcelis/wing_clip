@@ -23,9 +23,10 @@ module HasEncryptedAttributes
 
       define_method "#{attribute}=" do |value|
         if value.present?
-          value = value.to_json if klass == JSON
+          writable_value = value
+          writable_value = value.to_json if klass == JSON
 
-          public_send("encrypted_#{attribute}=", self.class.encryptor.encrypt_and_sign(value))
+          public_send("encrypted_#{attribute}=", self.class.encryptor.encrypt_and_sign(writable_value))
           instance_variable_set(:"@#{attribute}", value)
         else
           public_send("encrypted_#{attribute}=", nil)

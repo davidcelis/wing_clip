@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.text    :encrypted_foursquare_token
 
       t.text :google_email_address
+      t.text :google_calendar_id
       t.text :encrypted_google_credentials
 
       t.timestamps
