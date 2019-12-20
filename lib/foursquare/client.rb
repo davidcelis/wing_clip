@@ -30,15 +30,17 @@ module Foursquare
       Foursquare::User.new(body.dig('response', 'user'))
     end
 
-    def check_ins(limit: 250, before: Time.zone.now.to_i)
-      params = default_params.merge(
-        limit:  limit,
-        beforeTimestamp: before,
-      )
+    def check_ins(limit: 250, before: Time.zone.now.to_i, after: nil)
+      params = default_params
+      if after
+        params[:afterTimestamp] = after
+      else
+        params[:beforeTimestamp] = before
+      end
+      params[:limit] = limit
 
       response = get("#{API_URL}/users/self/checkins", params: params)
-
-      body = response.parse
+      body     = response.parse
 
       body.dig('response', 'checkins', 'items').map { |item| Foursquare::CheckIn.new(item) }
     end

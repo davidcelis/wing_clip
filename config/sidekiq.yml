@@ -1,0 +1,4 @@
+:schedule:
+  daily_poll_worker:
+    cron: '0 0 * * * *'
+    class: DailyPollWorker
