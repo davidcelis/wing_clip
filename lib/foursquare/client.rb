@@ -1,8 +1,9 @@
 module Foursquare
   class Client
-    TOKEN_URL = 'https://foursquare.com/oauth2/access_token'.freeze
-    API_URL   = 'https://api.foursquare.com/v2'.freeze
-    VERSION   = 20191201
+    TOKEN_URL      = 'https://foursquare.com/oauth2/access_token'.freeze
+    API_URL        = 'https://api.foursquare.com/v2'.freeze
+    VERSION        = 20191201
+    CHECK_IN_LIMIT = 250
 
     def self.exchange_authorization_code(code, redirect_to:)
       params = {
@@ -30,7 +31,7 @@ module Foursquare
       Foursquare::User.new(body.dig('response', 'user'))
     end
 
-    def check_ins(limit: 250, before: Time.zone.now.to_i, after: nil)
+    def check_ins(limit: CHECK_IN_LIMIT, before: Time.zone.now.to_i, after: nil)
       params = default_params
       if after
         params[:afterTimestamp] = after

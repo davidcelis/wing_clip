@@ -20,7 +20,7 @@ class SyncCheckInsWorker < ApplicationWorker
     end
 
     # Keep going until we reach the end.
-    if foursquare_check_ins.length == 250
+    if foursquare_check_ins.length == Foursquare::Client::CHECK_IN_LIMIT
       SyncCheckInsWorker.perform_async(user.id, foursquare_check_ins.last.created_at.to_i + 1)
     end
   end

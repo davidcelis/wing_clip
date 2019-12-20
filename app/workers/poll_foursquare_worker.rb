@@ -23,6 +23,6 @@ class PollFoursquareWorker < ApplicationWorker
     end
 
     # If there are more... do another.
-    self.class.perform_async(user_id)
+    self.class.perform_async(user_id) if foursquare_check_ins.length == Foursquare::Client::CHECK_IN_LIMIT
   end
 end
