@@ -17,7 +17,7 @@ class OAuth::GoogleController < ApplicationController
 
     current_user.save!
 
-    # SyncCheckInsWorker.perform_async(current_user.id, Time.zone.now.to_i)
+    SyncCheckInsWorker.perform_async(current_user.id, Time.zone.now.to_i)
 
     redirect_to root_url
   end

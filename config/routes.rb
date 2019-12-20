@@ -1,3 +1,5 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
   root to: 'home#index'
 
@@ -10,4 +12,6 @@ Rails.application.routes.draw do
     get 'google/authenticate'
     get 'google/callback'
   end
+
+  mount Sidekiq::Web => '/sidekiq', constraints: AdminConstraint.new
 end
