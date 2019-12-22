@@ -30,7 +30,7 @@ module Foursquare
       @latitude    = attributes.dig('venue', 'location', 'lat')
       @longitude   = attributes.dig('venue', 'location', 'lng')
       @coordinates = [@latitude, @longitude]
-      @mayor       = attributes['isMayor']
+      @mayor       = !!attributes['isMayor']
       @created_at  = Time.zone.at(attributes['createdAt'])
     end
   end

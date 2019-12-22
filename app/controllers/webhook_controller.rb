@@ -1,4 +1,10 @@
 class WebhookController < ApplicationController
+  WEBHOOK_SECRET = Rails.application.credentials.dig(:foursquare, :webhook_secret).freeze
+
+  skip_before_action :verify_authenticity_token
+  before_action :verify_webhook_secret
+  before_action :parse_json_params
+
   def hook
     if CheckIn.exists?(foursquare_id: foursquare_check_in.id)
       head :ok
@@ -25,6 +31,15 @@ class WebhookController < ApplicationController
   end
 
   def user
-    @user ||= User.find_by(foursquare_id: params[:checkin][:user][:id])
+    @user ||= User.find_by(foursquare_id: params[:user][:id])
+  end
+
+  def parse_json_params
+    params[:checkin] = JSON.parse(params[:checkin]).with_indifferent_access
+    params[:user]    = JSON.parse(params[:user]).with_indifferent_access
+  end
+
+  def verify_webhook_secret
+    head :unauthorized unless Rack::Utils.secure_compare(params[:secret], WEBHOOK_SECRET)
   end
 end
