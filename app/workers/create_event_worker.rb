@@ -6,7 +6,7 @@ class CreateEventWorker < ApplicationWorker
     @check_in_id = id
 
     event = Google::Apis::CalendarV3::Event.new(
-      summary: "@#{check_in.venue}#{' 👑' if check_in.mayor?}",
+      summary: "#{check_in.venue_emoji} #{check_in.venue}#{' 👑' if check_in.mayor?}",
       description: check_in.message,
       start: Google::Apis::CalendarV3::EventDateTime.new(date_time: check_in.created_at.rfc3339),
       end: Google::Apis::CalendarV3::EventDateTime.new(date_time: check_in.created_at.rfc3339),
@@ -30,6 +30,12 @@ class CreateEventWorker < ApplicationWorker
 
   def check_in
     @check_in ||= CheckIn.find(@check_in_id)
+  end
+
+  def summary
+    parts = [check_in.venue_emoji, check_in.venue]
+    parts << '👑' if check_in.mayor?
+    parts.join('')
   end
 
   def user

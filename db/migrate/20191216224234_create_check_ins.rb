@@ -6,6 +6,7 @@ class CreateCheckIns < ActiveRecord::Migration[6.0]
       t.text       :google_event_id
       t.text       :message
       t.text       :venue,         null: false
+      t.text       :category_id
       t.text       :address
       t.point      :coordinates
       t.boolean    :mayor,         null: false, default: false

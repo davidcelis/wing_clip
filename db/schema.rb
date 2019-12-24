@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_12_16_224234) do
     t.text "google_event_id"
     t.text "message"
     t.text "venue", null: false
+    t.text "category_id"
     t.text "address"
     t.point "coordinates"
     t.boolean "mayor", default: false, null: false

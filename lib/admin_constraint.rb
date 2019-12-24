@@ -1,8 +1,5 @@
 class AdminConstraint
   def matches?(request)
-    return false unless request.cookies.encrypted[:foursquare_id]
-
-    user = User.find_by(foursquare_id: request.cookies.encrypted[:foursquare_id])
-    user && user.id == 1
+    request.cookie_jar.encrypted[:foursquare_id] == 8302351
   end
 end

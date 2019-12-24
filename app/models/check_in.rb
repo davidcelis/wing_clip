@@ -3,6 +3,10 @@ class CheckIn < ApplicationRecord
 
   after_create :create_event
 
+  def venue_emoji
+    Foursquare::VenueEmoji.from_category_id(category_id)
+  end
+
   private
 
   def create_event

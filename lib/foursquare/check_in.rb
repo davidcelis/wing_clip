@@ -9,6 +9,9 @@ module Foursquare
     # The name of the location that was checked into
     attr_reader :venue
 
+    # The venue's primary category
+    attr_reader :category_id
+
     # The address of the venue
     attr_reader :address
 
@@ -32,6 +35,9 @@ module Foursquare
       @coordinates = [@latitude, @longitude]
       @mayor       = !!attributes['isMayor']
       @created_at  = Time.zone.at(attributes['createdAt'])
+
+      primary_category = attributes.dig('venue', 'categories').find { |c| c['primary'] == true }
+      @category_id = primary_category['id'] if primary_category.present?
     end
   end
 end
