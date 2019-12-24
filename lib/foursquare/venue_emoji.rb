@@ -56,7 +56,6 @@ module Foursquare
 
     # Karaoke Box
     "5744ccdfe4b0c0459246b4bb" => "🎤",
-    Supported countries: JP
 
     # Laser Tag
     "52e81612bcbc57f1066b79e6" => "🔫",
