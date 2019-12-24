@@ -12,6 +12,7 @@ class SyncCheckInsWorker < ApplicationWorker
         foursquare_id: foursquare_check_in.id,
         message:       foursquare_check_in.message,
         venue:         foursquare_check_in.venue,
+        category_id:   foursquare_check_in.category_id,
         address:       foursquare_check_in.address,
         coordinates:   foursquare_check_in.coordinates,
         mayor:         foursquare_check_in.mayor?,

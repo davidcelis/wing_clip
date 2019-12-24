@@ -14,4 +14,4 @@ test:
   database: wing_clip_test
 
 production:
-  url: <%= ENV.fetch('DATABASE_URL') %>
+  url: <%= ENV.fetch('DATABASE_URL', '') %>
