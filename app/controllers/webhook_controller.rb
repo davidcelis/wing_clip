@@ -14,6 +14,7 @@ class WebhookController < ApplicationController
         foursquare_id: foursquare_check_in.id,
         message:       foursquare_check_in.message,
         venue:         foursquare_check_in.venue,
+        event:         foursquare_check_in.event,
         category_id:   foursquare_check_in.category_id,
         address:       foursquare_check_in.address,
         coordinates:   foursquare_check_in.coordinates,

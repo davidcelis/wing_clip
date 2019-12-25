@@ -9,6 +9,9 @@ module Foursquare
     # The name of the location that was checked into
     attr_reader :venue
 
+    # The event that the user checked into, if for an event
+    attr_reader :event
+
     # The venue's primary category
     attr_reader :category_id
 
@@ -29,6 +32,7 @@ module Foursquare
       @id          = attributes['id']
       @message     = attributes['shout']
       @venue       = attributes.dig('venue', 'name')
+      @event       = attributes.dig('event', 'name')
       @address     = attributes.dig('venue', 'location', 'formattedAddress').join(', ')
       @latitude    = attributes.dig('venue', 'location', 'lat')
       @longitude   = attributes.dig('venue', 'location', 'lng')
