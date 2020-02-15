@@ -12,8 +12,10 @@ class OAuth::GoogleController < ApplicationController
     current_user.google_email_address = fetch_email
 
     # Create the user's "Swarm Check-ins calendar"
-    calendar = create_calendar
-    current_user.google_calendar_id = calendar.id
+    unless current_user.google_calendar_id
+      calendar = create_calendar
+      current_user.google_calendar_id = calendar.id
+    end
 
     current_user.save!
 
