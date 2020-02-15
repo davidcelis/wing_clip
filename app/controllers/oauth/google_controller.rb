@@ -50,4 +50,18 @@ class OAuth::GoogleController < ApplicationController
 
     google_calendar_service.insert_calendar_list(calendar_list_entry, color_rgb_format: true)
   end
+
+  def google_oauth_client
+    @google_oauth_client ||= Signet::OAuth2::Client.new(helpers.google_client_options)
+  end
+
+  def google_oauth_service
+    @google_oauth_service ||= Google::Apis::Oauth2V2::Oauth2Service.new
+  end
+
+  def google_calendar_service
+    @google_calendar_service ||= Google::Apis::CalendarV3::CalendarService.new.tap do |service|
+      service.authorization = google_oauth_client
+    end
+  end
 end
