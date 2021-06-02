@@ -19,7 +19,9 @@ class OAuth::GoogleController < ApplicationController
 
     current_user.save!
 
-    SyncCheckInsWorker.perform_async(current_user.id, Time.zone.now.to_i)
+    if current_user.google_calendar_id_recently_changed?
+      SyncCheckInsWorker.perform_async(current_user.id, Time.zone.now.to_i)
+    end
 
     redirect_to root_url
   end
