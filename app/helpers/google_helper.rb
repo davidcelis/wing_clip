@@ -4,7 +4,9 @@ require 'google/apis/oauth2_v2'
 module GoogleHelper
   AUTHORIZATION_URI = 'https://accounts.google.com/o/oauth2/auth'.freeze
   TOKEN_CREDENTIAL_URI = 'https://accounts.google.com/o/oauth2/token'.freeze
+
   CALENDAR_NAME = 'Swarm Check-ins'.freeze
+  CALENDAR_DESCRIPTION = "Where I've been and when. Synced via https://wingclip.app".freeze
 
   def google_client_options
     {

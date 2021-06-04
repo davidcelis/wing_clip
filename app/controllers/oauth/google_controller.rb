@@ -1,7 +1,4 @@
 class OAuth::GoogleController < ApplicationController
-  AUTHORIZATION_URI = 'https://accounts.google.com/o/oauth2/auth'.freeze
-  TOKEN_CREDENTIAL_URI = 'https://accounts.google.com/o/oauth2/token'.freeze
-
   def authenticate
     redirect_to google_oauth_client.authorization_uri.to_s
   end
@@ -19,7 +16,7 @@ class OAuth::GoogleController < ApplicationController
 
     current_user.save!
 
-    if current_user.google_calendar_id_recently_changed?
+    if current_user.google_calendar_id_previously_changed?
       SyncCheckInsWorker.perform_async(current_user.id, Time.zone.now.to_i)
     end
 
@@ -40,7 +37,7 @@ class OAuth::GoogleController < ApplicationController
   def create_calendar
     calendar = Google::Apis::CalendarV3::Calendar.new(
       summary: GoogleHelper::CALENDAR_NAME,
-      description: "When and where I've been. Synced via https://wingclip.app"
+      description: GoogleHelper::CALENDAR_DESCRIPTION
     )
     calendar_list_entry = google_calendar_service.insert_calendar(calendar)
 
