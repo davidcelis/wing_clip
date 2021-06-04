@@ -6,7 +6,7 @@ RSpec.describe Foursquare::Client do
 
   describe '.exchange_authorization_code' do
     let(:code) { 'FOURSQUARE_AUTHORIZATION_CODE' }
-    let(:redirect_uri) { 'http://localhost:3000/oauth/foursquare/callback' }
+    let(:redirect_uri) { Rails.application.routes.url_helpers.oauth_foursquare_callback_url(host: 'test.host') }
 
     it 'asks Foursquare for an access token using an authoriation code' do
       VCR.use_cassette('foursquare_authorization_code_exchange') do
