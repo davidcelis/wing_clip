@@ -2,10 +2,44 @@
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
+
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
+
 # Add additional requires below this line. Rails is not loaded until this point!
+
+# Load Sidekiq in fake mode. To run actual jobs, wrap them in a block as such:
+#
+#   Sidekiq::Testing.inline! do
+#     MyWorker.perform_async(args)
+#   end
+#
+# Or, simply create an instance and call `perform` on it directly:
+#
+#   MyWorker.new.perform(args)
+require 'sidekiq/testing'
+Sidekiq::Testing.fake!
+
+# Ensure Sidekiq jobs are cleared between test runs
+RSpec.configure do |config|
+  config.before(:each) do
+    Sidekiq::Worker.clear_all
+  end
+end
+
+require 'vcr'
+VCR.configure do |config|
+  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  config.hook_into :webmock
+
+  config.filter_sensitive_data('<FOURSQUARE_CLIENT_ID>') { Rails.application.credentials.foursquare[:client_id] }
+  config.filter_sensitive_data('<FOURSQUARE_CLIENT_SECRET>') { Rails.application.credentials.foursquare[:client_secret] }
+  config.filter_sensitive_data('<FOURSQUARE_WEBHOOK_SECRET>') { Rails.application.credentials.foursquare[:webhook_secret] }
+
+  config.filter_sensitive_data('<GOOGLE_CLIENT_ID>') { Rails.application.credentials.google[:client_id] }
+  config.filter_sensitive_data('<GOOGLE_CLIENT_SECRET>') { Rails.application.credentials.google[:client_secret] }
+end
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -32,7 +66,7 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  # config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
