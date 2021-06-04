@@ -1,4 +1,6 @@
 class OAuth::GoogleController < ApplicationController
+  before_action :require_foursquare_login!
+
   def authenticate
     redirect_to google_oauth_client.authorization_uri.to_s
   end
@@ -63,6 +65,14 @@ class OAuth::GoogleController < ApplicationController
   def google_calendar_service
     @google_calendar_service ||= Google::Apis::CalendarV3::CalendarService.new.tap do |service|
       service.authorization = google_oauth_client
+    end
+  end
+
+  def require_foursquare_login!
+    unless current_user
+      flash[:error] = 'You must log in with Foursquare before logging in with Google'
+
+      redirect_to root_url
     end
   end
 end
