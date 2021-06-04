@@ -33,12 +33,12 @@ VCR.configure do |config|
   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   config.hook_into :webmock
 
-  config.filter_sensitive_data('<FOURSQUARE_CLIENT_ID>') { Rails.application.credentials.foursquare[:client_id] }
-  config.filter_sensitive_data('<FOURSQUARE_CLIENT_SECRET>') { Rails.application.credentials.foursquare[:client_secret] }
-  config.filter_sensitive_data('<FOURSQUARE_WEBHOOK_SECRET>') { Rails.application.credentials.foursquare[:webhook_secret] }
+  config.filter_sensitive_data('FOURSQUARE_CLIENT_ID') { Rails.application.credentials.foursquare[:client_id] }
+  config.filter_sensitive_data('FOURSQUARE_CLIENT_SECRET') { Rails.application.credentials.foursquare[:client_secret] }
+  config.filter_sensitive_data('FOURSQUARE_WEBHOOK_SECRET') { Rails.application.credentials.foursquare[:webhook_secret] }
 
-  config.filter_sensitive_data('<GOOGLE_CLIENT_ID>') { Rails.application.credentials.google[:client_id] }
-  config.filter_sensitive_data('<GOOGLE_CLIENT_SECRET>') { Rails.application.credentials.google[:client_secret] }
+  config.filter_sensitive_data('GOOGLE_CLIENT_ID') { Rails.application.credentials.google[:client_id] }
+  config.filter_sensitive_data('GOOGLE_CLIENT_SECRET') { Rails.application.credentials.google[:client_secret] }
 end
 
 # Requires supporting ruby files with custom matchers and macros, etc, in

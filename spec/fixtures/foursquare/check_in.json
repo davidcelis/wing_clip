@@ -1,0 +1,59 @@
+{
+  "id": "606ddf9f3507ba5fc1d40658",
+  "createdAt": 1617813407,
+  "type": "checkin",
+  "entities": [],
+  "shout": "💉",
+  "timeZoneOffset": -420,
+  "venue": {
+    "id": "60136f7335aed62e7d818e5a",
+    "name": "Covid-19 Vaccination Center",
+    "location": {
+      "lat": 45.529565,
+      "lng": -122.662628,
+      "labeledLatLngs": [{
+        "label": "display",
+        "lat": 45.529565,
+        "lng": -122.662628
+      }],
+      "postalCode": "97232",
+      "cc": "US",
+      "city": "Portland",
+      "state": "OR",
+      "country": "United States",
+      "formattedAddress": ["Portland, OR 97232"]
+    },
+    "categories": [{
+      "id": "4bf58dd8d48988d104941735",
+      "name": "Medical Center",
+      "pluralName": "Medical Centers",
+      "shortName": "Medical",
+      "icon": {
+        "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/medical_",
+        "suffix": ".png"
+      },
+      "primary": true
+    }]
+  },
+  "likes": {
+    "count": 0,
+    "groups": []
+  },
+  "like": false,
+  "isMayor": false,
+  "photos": {
+    "count": 0,
+    "items": []
+  },
+  "posts": {
+    "count": 0,
+    "textCount": 0
+  },
+  "comments": {
+    "count": 0
+  },
+  "source": {
+    "name": "Swarm for iOS",
+    "url": "https:\/\/www.swarmapp.com"
+  }
+}

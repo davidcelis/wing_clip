@@ -1,0 +1,619 @@
+{
+  "id": "8302351",
+  "firstName": "David",
+  "lastName": "Celis",
+  "gender": "male",
+  "countryCode": "US",
+  "relationship": "self",
+  "canonicalUrl": "https:\/\/foursquare.com\/user\/8302351",
+  "photo": {
+    "prefix": "https:\/\/fastly.4sqi.net\/img\/user\/",
+    "suffix": "\/8302351_2eoOh2Mk_xMzUtDCnAR51BqhUuOi6P-Hf_t8-Vl5XHjVappHK7AKIkcbocxSpaFjEwWwFIr09.jpg"
+  },
+  "friends": {
+    "count": 52,
+    "groups": [{
+      "type": "friends",
+      "name": "Mutual friends",
+      "count": 0,
+      "items": []
+    }, {
+      "type": "others",
+      "name": "Other friends",
+      "count": 52,
+      "items": [{
+        "id": "56382295",
+        "firstName": "Jim",
+        "lastName": "Fazzone",
+        "gender": "male",
+        "countryCode": "US",
+        "relationship": "friend",
+        "photo": {
+          "prefix": "https:\/\/fastly.4sqi.net\/img\/user\/",
+          "suffix": "\/56382295_5uxomeak_hTMDtgo8378eBoijurLSLm4_J_xPxmBmqbW_F7EwfKjrav3CfHgEaTBacCL_dyRI.jpg"
+        },
+        "tips": {
+          "count": 100
+        },
+        "lists": {
+          "groups": [{
+            "type": "created",
+            "count": 4,
+            "items": []
+          }]
+        },
+        "homeCity": "Portland, OR",
+        "bio": "",
+        "contact": {
+          "email": "james.fazzone@gmail.com",
+          "twitter": "jimfazzone",
+          "facebook": "668491899"
+        }
+      }, {
+        "id": "13667981",
+        "firstName": "Julia",
+        "gender": "female",
+        "countryCode": "ES",
+        "relationship": "friend",
+        "photo": {
+          "prefix": "https:\/\/fastly.4sqi.net\/img\/user\/",
+          "suffix": "\/13667981_ue-7j1Jw_IGjg6qOfi-jETC6Tz8nzH6nNCZjztc70m_8ODNDPzJ5uCvw0IUwyhp-755CQDzzT.jpg"
+        },
+        "tips": {
+          "count": 13
+        },
+        "lists": {
+          "groups": [{
+            "type": "created",
+            "count": 3,
+            "items": []
+          }]
+        },
+        "homeCity": "",
+        "bio": "",
+        "contact": {}
+      }, {
+        "id": "17605347",
+        "firstName": "Jessica 💖",
+        "lastName": "Suttles",
+        "gender": "none",
+        "countryCode": "US",
+        "relationship": "friend",
+        "photo": {
+          "prefix": "https:\/\/fastly.4sqi.net\/img\/user\/",
+          "suffix": "\/17605347-OJCDJAJYXNJZVAKX.jpg"
+        },
+        "tips": {
+          "count": 4
+        },
+        "lists": {
+          "groups": [{
+            "type": "created",
+            "count": 4,
+            "items": []
+          }]
+        },
+        "homeCity": "San Francisco, CA",
+        "bio": "",
+        "contact": {
+          "twitter": "jlsuttles",
+          "facebook": "7722201"
+        }
+      }, {
+        "id": "10002602",
+        "firstName": "Dylan",
+        "lastName": "Egan",
+        "gender": "male",
+        "countryCode": "AU",
+        "relationship": "friend",
+        "photo": {
+          "prefix": "https:\/\/fastly.4sqi.net\/img\/user\/",
+          "suffix": "\/10002602-A4BK4Z1K2MCQ12XY"
+        },
+        "tips": {
+          "count": 0
+        },
+        "lists": {
+          "groups": [{
+            "type": "created",
+            "count": 2,
+            "items": []
+          }]
+        },
+        "homeCity": "Berlin, Deutschland",
+        "bio": "",
+        "contact": {
+          "email": "dylanegan@gmail.com",
+          "facebook": "10154342731033294"
+        }
+      }, {
+        "id": "323539",
+        "firstName": "Kanane",
+        "lastName": "Jones",
+        "gender": "female",
+        "countryCode": "US",
+        "relationship": "friend",
+        "photo": {
+          "prefix": "https:\/\/fastly.4sqi.net\/img\/user\/",
+          "suffix": "\/323539-RVQYWC3MQHPUIJHM.jpg"
+        },
+        "tips": {
+          "count": 8
+        },
+        "lists": {
+          "groups": [{
+            "type": "created",
+            "count": 3,
+            "items": []
+          }]
+        },
+        "homeCity": "San Francisco, CA",
+        "bio": "",
+        "contact": {
+          "email": "spideyj@gmail.com",
+          "twitter": "spidey_j",
+          "facebook": "820059017"
+        }
+      }, {
+        "id": "487257",
+        "firstName": "Annika",
+        "lastName": "Backstrom",
+        "gender": "female",
+        "countryCode": "US",
+        "relationship": "friend",
+        "photo": {
+          "prefix": "https:\/\/fastly.4sqi.net\/img\/user\/",
+          "suffix": "\/487257-QSJGYUINWSYVVYWY.jpg"
+        },
+        "tips": {
+          "count": 10
+        },
+        "lists": {
+          "groups": [{
+            "type": "created",
+            "count": 2,
+            "items": []
+          }]
+        },
+        "homeCity": "Rumney, NH",
+        "bio": "",
+        "contact": {
+          "email": "annika@sixohthree.com"
+        }
+      }, {
+        "id": "15057947",
+        "firstName": "Ezekiel",
+        "lastName": "Templin",
+        "gender": "male",
+        "countryCode": "US",
+        "relationship": "friend",
+        "photo": {
+          "prefix": "https:\/\/fastly.4sqi.net\/img\/user\/",
+          "suffix": "\/15057947_maXhVnUs_Xs-WMIWqiC4CjeN2qGlBUUji2aRsXhIYSAhayedQ0abHBAiYZThMhKjcwxs6m3Dn.jpg"
+        },
+        "tips": {
+          "count": 0
+        },
+        "lists": {
+          "groups": [{
+            "type": "created",
+            "count": 4,
+            "items": []
+          }]
+        },
+        "homeCity": "Oakland, CA",
+        "bio": "Human.",
+        "contact": {
+          "twitter": "ezkl"
+        }
+      }, {
+        "id": "1777157",
+        "firstName": "Justin",
+        "lastName": "Searls",
+        "gender": "male",
+        "countryCode": "US",
+        "relationship": "friend",
+        "photo": {
+          "prefix": "https:\/\/fastly.4sqi.net\/img\/user\/",
+          "suffix": "\/1777157-CQ5XE1AGUJUMEMMW.jpg"
+        },
+        "tips": {
+          "count": 83
+        },
+        "lists": {
+          "groups": [{
+            "type": "created",
+            "count": 4,
+            "items": []
+          }]
+        },
+        "homeCity": "Columbus, OH",
+        "bio": "",
+        "contact": {
+          "email": "searls@gmail.com",
+          "twitter": "searls",
+          "facebook": "10100248691452284"
+        }
+      }, {
+        "id": "22021617",
+        "firstName": "Benjamin",
+        "lastName": "Chait",
+        "gender": "male",
+        "countryCode": "US",
+        "relationship": "friend",
+        "photo": {
+          "prefix": "https:\/\/fastly.4sqi.net\/img\/user\/",
+          "suffix": "\/22021617_XXAND81z_WaxPuYYOj-RwXueUIg37ufHZO9FFdeMGLO4s4-5LZQnzPaopunO4BvKYhLR_N_oK.jpg"
+        },
+        "tips": {
+          "count": 188
+        },
+        "lists": {
+          "groups": [{
+            "type": "created",
+            "count": 4,
+            "items": []
+          }]
+        },
+        "homeCity": "SF",
+        "bio": "Adventurer.",
+        "contact": {
+          "email": "hello@benjaminchait.net",
+          "twitter": "benjaminchait",
+          "facebook": "5311324"
+        },
+        "superuser": 3
+      }, {
+        "id": "442136",
+        "firstName": "Takafumi",
+        "lastName": "Ikeda",
+        "gender": "male",
+        "countryCode": "JP",
+        "relationship": "friend",
+        "photo": {
+          "prefix": "https:\/\/fastly.4sqi.net\/img\/user\/",
+          "suffix": "\/UM2KJGCICF451EVM.jpg"
+        },
+        "tips": {
+          "count": 3
+        },
+        "lists": {
+          "groups": [{
+            "type": "created",
+            "count": 3,
+            "items": []
+          }]
+        },
+        "homeCity": "港区, 東京都",
+        "bio": "",
+        "contact": {
+          "email": "ikeike443+fq@gmail.com",
+          "twitter": "ikeike443",
+          "facebook": "1737293077"
+        }
+      }]
+    }]
+  },
+  "birthday": 606528000,
+  "tips": {
+    "count": 51
+  },
+  "homeCity": "Portland, Ore.",
+  "bio": "Cowboy coder at Stripe",
+  "contact": {
+    "phone": "8134689737",
+    "verifiedPhone": "false",
+    "email": "me@davidcel.is",
+    "twitter": "davidcelis",
+    "facebook": "1279200017"
+  },
+  "photos": {
+    "count": 205,
+    "items": [{
+      "id": "5f358243786a7936f77cf49a",
+      "createdAt": 1597342275,
+      "source": {
+        "name": "Swarm for iOS",
+        "url": "https:\/\/www.swarmapp.com"
+      },
+      "prefix": "https:\/\/fastly.4sqi.net\/img\/general\/",
+      "suffix": "\/8302351_Qt7JVuVm34VjPTOFPO261tw_wbNSwTSNF4EGyCOXuxY.jpg",
+      "width": 1440,
+      "height": 1920,
+      "visibility": "public",
+      "venue": {
+        "id": "5f305625b6f5c30685ea0842",
+        "name": "Kimura Toast Bar",
+        "location": {
+          "address": "3808 N Williams Ave",
+          "lat": 45.550313,
+          "lng": -122.666389,
+          "labeledLatLngs": [{
+            "label": "display",
+            "lat": 45.550313,
+            "lng": -122.666389
+          }],
+          "postalCode": "97227",
+          "cc": "US",
+          "city": "Portland",
+          "state": "OR",
+          "country": "United States",
+          "formattedAddress": ["3808 N Williams Ave", "Portland, OR 97227"]
+        },
+        "categories": [{
+          "id": "4bf58dd8d48988d16d941735",
+          "name": "Café",
+          "pluralName": "Cafés",
+          "shortName": "Café",
+          "icon": {
+            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/food\/cafe_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }],
+        "like": false,
+        "delivery": {
+          "id": "2429351",
+          "url": "https:\/\/www.grubhub.com\/restaurant\/kimura-toast-bar-3808-north-williams-avenue-portland\/2429351?affiliate=1131&utm_source=foursquare-affiliate-network&utm_medium=affiliate&utm_campaign=1131&utm_content=2429351",
+          "provider": {
+            "name": "grubhub",
+            "icon": {
+              "prefix": "https:\/\/fastly.4sqi.net\/img\/general\/cap\/",
+              "sizes": [40, 50],
+              "name": "\/delivery_provider_grubhub_20180129.png"
+            }
+          }
+        }
+      },
+      "tip": {
+        "id": "5f35823fe2339d1647260426",
+        "createdAt": 1597342271,
+        "text": "try the toast",
+        "type": "user",
+        "canonicalUrl": "https:\/\/foursquare.com\/item\/5f35823fe2339d1647260426",
+        "likes": {
+          "count": 0,
+          "groups": []
+        },
+        "like": false,
+        "viewCount": 32,
+        "agreeCount": 1,
+        "disagreeCount": 0,
+        "lastVoteText": "Upvoted Mar 20",
+        "lastUpvoteTimestamp": 1616263964,
+        "todo": {
+          "count": 0
+        }
+      }
+    }]
+  },
+  "checkinPings": "off",
+  "pings": false,
+  "type": "user",
+  "mayorships": {
+    "count": 0,
+    "items": []
+  },
+  "checkins": {
+    "count": 9773,
+    "items": [{
+      "id": "606ddf9f3507ba5fc1d40658",
+      "createdAt": 1617813407,
+      "type": "checkin",
+      "entities": [],
+      "shout": "💉",
+      "timeZoneOffset": -420,
+      "venue": {
+        "id": "60136f7335aed62e7d818e5a",
+        "name": "Covid-19 Vaccination Center",
+        "location": {
+          "lat": 45.529565,
+          "lng": -122.662628,
+          "labeledLatLngs": [{
+            "label": "display",
+            "lat": 45.529565,
+            "lng": -122.662628
+          }],
+          "postalCode": "97232",
+          "cc": "US",
+          "city": "Portland",
+          "state": "OR",
+          "country": "United States",
+          "formattedAddress": ["Portland, OR 97232"]
+        },
+        "categories": [{
+          "id": "4bf58dd8d48988d104941735",
+          "name": "Medical Center",
+          "pluralName": "Medical Centers",
+          "shortName": "Medical",
+          "icon": {
+            "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/building\/medical_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }],
+        "like": false
+      },
+      "likes": {
+        "count": 0,
+        "groups": []
+      },
+      "like": false,
+      "isMayor": false,
+      "photos": {
+        "count": 0,
+        "items": []
+      },
+      "posts": {
+        "count": 0,
+        "textCount": 0
+      },
+      "comments": {
+        "count": 0
+      },
+      "source": {
+        "name": "Swarm for iOS",
+        "url": "https:\/\/www.swarmapp.com"
+      }
+    }]
+  },
+  "requests": {
+    "count": 7
+  },
+  "lists": {
+    "count": 6,
+    "groups": [{
+      "type": "created",
+      "count": 4,
+      "items": [{
+        "id": "5e0fcc252e418a0007223bc7",
+        "name": "Roma Norte",
+        "description": "",
+        "editable": true,
+        "public": true,
+        "collaborative": false,
+        "url": "\/davidcelis\/list\/roma-norte",
+        "canonicalUrl": "https:\/\/foursquare.com\/davidcelis\/list\/roma-norte",
+        "createdAt": 1578093605,
+        "updatedAt": 1578094081,
+        "photo": {
+          "id": "50119483e4b0649cc0b23391",
+          "createdAt": 1343329411,
+          "prefix": "https:\/\/fastly.4sqi.net\/img\/general\/",
+          "suffix": "\/JMEP9OQG6QH-4npDHDYv4ccUzbQz4CUJQMYkBFvhnwk.jpg",
+          "width": 405,
+          "height": 540,
+          "user": {
+            "id": "14559986",
+            "firstName": "Pedro",
+            "lastName": "Evia",
+            "gender": "male",
+            "countryCode": "MX",
+            "photo": {
+              "prefix": "https:\/\/fastly.4sqi.net\/img\/user\/",
+              "suffix": "\/C14WIKMEYI5EGMQY.jpg"
+            }
+          },
+          "visibility": "public"
+        },
+        "followers": {
+          "count": 0
+        },
+        "listItems": {
+          "count": 6
+        }
+      }, {
+        "id": "59c84fc789e4905aef6b5c9c",
+        "name": "Tokyo",
+        "description": "Places to eat in Tokyo",
+        "editable": true,
+        "public": true,
+        "collaborative": false,
+        "url": "\/davidcelis\/list\/tokyo",
+        "canonicalUrl": "https:\/\/foursquare.com\/davidcelis\/list\/tokyo",
+        "createdAt": 1506299847,
+        "updatedAt": 1555912705,
+        "photo": {
+          "id": "5842815eeef5da6772b4b30c",
+          "createdAt": 1480753502,
+          "prefix": "https:\/\/fastly.4sqi.net\/img\/general\/",
+          "suffix": "\/5053872_yme8vOfIYhEpyHMzUY4-AbErMM-T1eyP_MfsBjkHdFQ.jpg",
+          "width": 1919,
+          "height": 1439,
+          "user": {
+            "id": "5053872",
+            "firstName": "Nnkoji",
+            "gender": "male",
+            "countryCode": "JP",
+            "photo": {
+              "prefix": "https:\/\/fastly.4sqi.net\/img\/user\/",
+              "suffix": "\/5053872_X7z-yHJn_8_q5-_e4hqVie8sUtIj45RVjZxlAPDZuVEKxPTT8hZGaYYg_NisbbMJH1QqahQR2.jpg"
+            }
+          },
+          "visibility": "public"
+        },
+        "followers": {
+          "count": 0
+        },
+        "listItems": {
+          "count": 71
+        }
+      }, {
+        "id": "59c5afa81bc7042c23e2d7ea",
+        "name": "Osaka",
+        "description": "Places I want to go in Osaka",
+        "editable": true,
+        "public": true,
+        "collaborative": false,
+        "url": "\/davidcelis\/list\/osaka",
+        "canonicalUrl": "https:\/\/foursquare.com\/davidcelis\/list\/osaka",
+        "createdAt": 1506127784,
+        "updatedAt": 1555401044,
+        "photo": {
+          "id": "5190b02e498e98db874150d3",
+          "createdAt": 1368436782,
+          "prefix": "https:\/\/fastly.4sqi.net\/img\/general\/",
+          "suffix": "\/45934919_22wxBK7bXcLYCmdodOAI7KXg-m38yyvVfzZ7lYChNmk",
+          "width": 640,
+          "height": 640,
+          "user": {
+            "id": "45934919",
+            "firstName": "Brian",
+            "lastName": "Wanamaker",
+            "gender": "male",
+            "countryCode": "JP",
+            "photo": {
+              "prefix": "https:\/\/fastly.4sqi.net\/img\/user\/",
+              "suffix": "\/XTTSU3WSJ4FZJYXU.jpg"
+            }
+          },
+          "visibility": "public"
+        },
+        "followers": {
+          "count": 0
+        },
+        "listItems": {
+          "count": 4
+        }
+      }]
+    }, {
+      "type": "followed",
+      "count": 0,
+      "items": []
+    }, {
+      "type": "yours",
+      "count": 2,
+      "items": [{
+        "id": "8302351\/todos",
+        "name": "My Saved Places",
+        "description": "",
+        "type": "todos",
+        "editable": true,
+        "public": true,
+        "collaborative": false,
+        "url": "\/davidcelis\/list\/todos",
+        "canonicalUrl": "https:\/\/foursquare.com\/davidcelis\/list\/todos",
+        "listItems": {
+          "count": 1
+        }
+      }, {
+        "id": "8302351\/venuelikes",
+        "name": "My Liked Places",
+        "description": "",
+        "type": "likes",
+        "editable": true,
+        "public": true,
+        "collaborative": false,
+        "url": "\/davidcelis\/list\/venuelikes",
+        "canonicalUrl": "https:\/\/foursquare.com\/davidcelis\/list\/venuelikes",
+        "listItems": {
+          "count": 0
+        }
+      }]
+    }]
+  },
+  "blockedStatus": "none",
+  "createdAt": 1301778065,
+  "lenses": [],
+  "referralId": "u-8302351"
+}
