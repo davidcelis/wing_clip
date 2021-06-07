@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.googleapis.com/calendar/v3/calendars
+    body:
+      encoding: UTF-8
+      string: '{"description":"Where I''ve been and when. Synced via https://wingclip.app","summary":"Swarm
+        Check-ins"}'
+    headers:
+      User-Agent:
+      - unknown/0.0.0 google-api-ruby-client/0.3.0 Mac OS X/11.3 (gzip)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Fri, 04 Jun 2021 20:30:59 GMT
+      X-Goog-Api-Client:
+      - gl-ruby/3.0.1 gdcl/1.3.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer GOOGLE_ACCESS_TOKEN
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Fri, 04 Jun 2021 20:31:01 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Etag:
+      - '"JYGASPqUe32gZCe58ifZ_E7txaw"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Encoding:
+      - gzip
+      Server:
+      - ESF
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "calendar#calendar",
+         "etag": "\"JYGASPqUe32gZCe58ifZ_E7txaw\"",
+         "id": "GOOGLE_CALENDAR_ID",
+         "summary": "Swarm Check-ins",
+         "description": "Where I've been and when. Synced via https://wingclip.app",
+         "timeZone": "UTC",
+         "conferenceProperties": {
+          "allowedConferenceSolutionTypes": [
+           "hangoutsMeet"
+          ]
+         }
+        }
+  recorded_at: Fri, 04 Jun 2021 20:31:01 GMT
+recorded_with: VCR 6.0.0

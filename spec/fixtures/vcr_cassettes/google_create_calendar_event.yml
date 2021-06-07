@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.googleapis.com/calendar/v3/calendars/GOOGLE_CALENDAR_ID/events
+    body:
+      encoding: UTF-8
+      string: "{\"description\":\"\U0001F489\",\"end\":{\"dateTime\":\"2021-06-04T23:10:30Z\"},\"guestsCanInviteOthers\":false,\"location\":\"Portland,
+        OR 97232\",\"source\":{\"title\":\"WingClip\",\"url\":\"http://example.com/\"},\"start\":{\"dateTime\":\"2021-06-04T23:10:30Z\"},\"summary\":\"\U0001F3E5
+        Covid-19 Vaccination Center\",\"transparency\":\"transparent\"}"
+    headers:
+      User-Agent:
+      - unknown/0.0.0 google-api-ruby-client/0.3.0 Mac OS X/11.3 (gzip)
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Fri, 04 Jun 2021 23:10:30 GMT
+      X-Goog-Api-Client:
+      - gl-ruby/3.0.1 gdcl/1.3.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer GOOGLE_ACCESS_TOKEN
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Pragma:
+      - no-cache
+      Date:
+      - Fri, 04 Jun 2021 23:10:31 GMT
+      Expires:
+      - Mon, 01 Jan 1990 00:00:00 GMT
+      Etag:
+      - '"3245696462210000"'
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Content-Encoding:
+      - gzip
+      Server:
+      - ESF
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443";
+        ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "{\n \"kind\": \"calendar#event\",\n \"etag\": \"\\\"3245696462210000\\\"\",\n
+        \"id\": \"GOOGLE_EVENT_ID\",\n \"status\": \"confirmed\",\n \"htmlLink\":
+        \"https://www.google.com/calendar/event?eid=cGxhM3NsZ2dqMXBhcmkzY3MwcXY2ZW8ya2cgY18yM3ZpcmNvbzFraWIzdHU4NzJndWJndTR2OEBn\",\n
+        \"created\": \"2021-06-04T23:10:31.000Z\",\n \"updated\": \"2021-06-04T23:10:31.105Z\",\n
+        \"summary\": \"\U0001F3E5 Covid-19 Vaccination Center\",\n \"description\":
+        \"\U0001F489\",\n \"location\": \"Portland, OR 97232\",\n \"creator\": {\n
+        \ \"email\": \"me@davidcel.is\"\n },\n \"organizer\": {\n  \"email\": \"GOOGLE_CALENDAR_ID\",\n
+        \ \"displayName\": \"Swarm Check-ins\",\n  \"self\": true\n },\n \"start\":
+        {\n  \"dateTime\": \"2021-06-04T23:10:30Z\"\n },\n \"end\": {\n  \"dateTime\":
+        \"2021-06-04T23:10:30Z\"\n },\n \"transparency\": \"transparent\",\n \"iCalUID\":
+        \"GOOGLE_EVENT_ID@google.com\",\n \"sequence\": 0,\n \"guestsCanInviteOthers\":
+        false,\n \"reminders\": {\n  \"useDefault\": true\n },\n \"source\": {\n  \"url\":
+        \"http://example.com/\",\n  \"title\": \"WingClip\"\n },\n \"eventType\":
+        \"default\"\n}\n"
+  recorded_at: Fri, 04 Jun 2021 23:10:31 GMT
+recorded_with: VCR 6.0.0

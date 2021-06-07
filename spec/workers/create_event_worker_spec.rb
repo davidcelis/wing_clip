@@ -8,7 +8,7 @@ RSpec.describe CreateEventWorker, type: :worker do
       foursquare_id: 8302351,
       foursquare_name: 'David Celis',
       foursquare_email: 'me@davidcel.is',
-      google_calendar_id: 'c_23vircoo1kib3tu872gubgu4v8@group.calendar.google.com',
+      google_calendar_id: 'GOOGLE_CALENDAR_ID',
       google_credentials: {
         'access_token' => 'GOOGLE_ACCESS_TOKEN',
         'expires_in' => 3599,
@@ -38,6 +38,6 @@ RSpec.describe CreateEventWorker, type: :worker do
     end
 
     check_in.reload
-    expect(check_in.google_event_id).to eq('pla3slggj1pari3cs0qv6eo2kg')
+    expect(check_in.google_event_id).to eq('GOOGLE_EVENT_ID')
   end
 end

@@ -1,0 +1,131 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://foursquare.com/oauth2/access_token?client_id=FOURSQUARE_CLIENT_ID&client_secret=FOURSQUARE_CLIENT_SECRET&code=FOURSQUARE_AUTHORIZATION_CODE&grant_type=authorization_code&redirect_uri=http://test.host/oauth/foursquare/callback
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - foursquare.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '67'
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Fri, 4 Jun 2021 20:21:47 GMT
+      Cache-Control:
+      - no-cache, private, no-store
+      Pragma:
+      - no-cache
+      X-Rate-Limit-Key:
+      - 76.115.47.28
+      X-Ex:
+      - fastly_cdn
+      Log-Origin:
+      - name=F_Host_1
+      Fastly-Restarts:
+      - '1'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Fri, 04 Jun 2021 20:21:47 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pdx12324-PDX
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding,User-Agent,Accept-Language
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"FOURSQUARE_API_TOKEN"}'
+  recorded_at: Fri, 04 Jun 2021 20:21:47 GMT
+- request:
+    method: get
+    uri: https://api.foursquare.com/v2/users/self?oauth_token=FOURSQUARE_API_TOKEN&v=20191201
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.foursquare.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '1945'
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=utf-8
+      Tracer-Time:
+      - '145'
+      X-Ratelimit-Path:
+      - "/v2/users/X"
+      X-Ratelimit-Limit:
+      - '500'
+      X-Ratelimit-Reset:
+      - '1622840990'
+      X-Ratelimit-Remaining:
+      - '497'
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Rate-Limit-Key:
+      - 76.115.47.28
+      X-Ex:
+      - fastly_cdn
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Fri, 04 Jun 2021 20:24:54 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pdx12322-PDX
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding,User-Agent,Accept-Language
+    body:
+      encoding: UTF-8
+      string: "{\"meta\":{\"code\":200,\"requestId\":\"60ba8c169d8bc918674c9759\"},\"notifications\":[{\"type\":\"notificationTray\",\"item\":{\"unreadCount\":0}}],\"response\":{\"user\":{\"id\":\"8302351\",\"firstName\":\"David\",\"lastName\":\"Celis\",\"gender\":\"male\",\"countryCode\":\"US\",\"relationship\":\"self\",\"canonicalUrl\":\"https://foursquare.com/user/8302351\",\"photo\":{\"prefix\":\"https://fastly.4sqi.net/img/user/\",\"suffix\":\"/8302351_2eoOh2Mk_xMzUtDCnAR51BqhUuOi6P-Hf_t8-Vl5XHjVappHK7AKIkcbocxSpaFjEwWwFIr09.jpg\"},\"friends\":{\"count\":0,\"items\":[]},\"birthday\":606528000,\"tips\":{\"count\":51},\"homeCity\":\"Portland, Ore.\",\"bio\":\"Cowboy coder at Stripe\",\"contact\":{\"phone\":\"8134689737\",\"verifiedPhone\":\"false\",\"email\":\"me@davidcel.is\",\"twitter\":\"davidcelis\",\"facebook\":\"1279200017\"},\"photos\":{\"count\":0,\"items\":[]},\"checkinPings\":\"off\",\"pings\":false,\"type\":\"user\",\"mayorships\":{\"count\":0,\"items\":[]},\"checkins\":{\"count\":9773,\"items\":[{\"id\":\"606ddf9f3507ba5fc1d40658\",\"createdAt\":1617813407,\"type\":\"checkin\",\"entities\":[],\"shout\":\"U0001F489\",\"timeZoneOffset\":-420,\"venue\":{\"id\":\"60136f7335aed62e7d818e5a\",\"name\":\"Covid-19 Vaccination Center\",\"location\":{\"lat\":45.529565,\"lng\":-122.662628,\"labeledLatLngs\":[{\"label\":\"display\",\"lat\":45.529565,\"lng\":-122.662628}],\"postalCode\":\"97232\",\"cc\":\"US\",\"city\":\"Portland\",\"state\":\"OR\",\"country\":\"United States\",\"formattedAddress\":[\"Portland, OR 97232\"]},\"categories\":[{\"id\":\"4bf58dd8d48988d104941735\",\"name\":\"Medical Center\",\"pluralName\":\"Medical Centers\",\"shortName\":\"Medical\",\"icon\":{\"prefix\":\"https://ss3.4sqi.net/img/categories_v2/building/medical_\",\"suffix\":\".png\"},\"primary\":true}],\"like\":false},\"likes\":{\"count\":0,\"groups\":[]},\"like\":false,\"isMayor\":false,\"photos\":{\"count\":0,\"items\":[]},\"posts\":{\"count\":0,\"textCount\":0},\"comments\":{\"count\":0},\"source\":{\"name\":\"Swarm for iOS\",\"url\":\"https://www.swarmapp.com\"}}]},\"requests\":{\"count\":7},\"lists\":{\"count\":0,\"items\":[]},\"blockedStatus\":\"none\",\"createdAt\":1301778065,\"lenses\":[],\"referralId\":\"u-8302351\"}}}"
+  recorded_at: Fri, 04 Jun 2021 20:24:54 GMT
+recorded_with: VCR 6.0.0

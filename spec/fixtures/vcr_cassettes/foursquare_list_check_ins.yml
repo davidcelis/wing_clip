@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.foursquare.com/v2/users/self/checkins?beforeTimestamp=1622839451&limit=250&oauth_token=FOURSQUARE_API_TOKEN&v=20191201
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.foursquare.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '6589'
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=utf-8
+      Tracer-Time:
+      - '320'
+      X-Ratelimit-Path:
+      - "/v2/users/X/checkins"
+      X-Ratelimit-Limit:
+      - '500'
+      X-Ratelimit-Reset:
+      - '1622840990'
+      X-Ratelimit-Remaining:
+      - '494'
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Rate-Limit-Key:
+      - 76.115.47.28
+      X-Ex:
+      - fastly_cdn
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Fri, 04 Jun 2021 20:44:12 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pdx12328-PDX
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding,User-Agent,Accept-Language
+    body:
+      encoding: UTF-8
+      string: "{\"meta\":{\"code\":200,\"requestId\":\"60ba909b430b510f7e9d9220\"},\"notifications\":[{\"type\":\"notificationTray\",\"item\":{\"unreadCount\":0}}],\"response\":{\"checkins\":{\"count\":9773,\"items\":[{\"id\":\"606ddf9f3507ba5fc1d40658\",\"createdAt\":1617813407,\"type\":\"checkin\",\"entities\":[],\"shout\":\"\U0001F489\",\"timeZoneOffset\":-420,\"venue\":{\"id\":\"60136f7335aed62e7d818e5a\",\"name\":\"Covid-19
+        Vaccination Center\",\"location\":{\"lat\":45.529565,\"lng\":-122.662628,\"labeledLatLngs\":[{\"label\":\"display\",\"lat\":45.529565,\"lng\":-122.662628}],\"postalCode\":\"97232\",\"cc\":\"US\",\"city\":\"Portland\",\"state\":\"OR\",\"country\":\"United
+        States\",\"formattedAddress\":[\"Portland, OR 97232\"]},\"categories\":[{\"id\":\"4bf58dd8d48988d104941735\",\"name\":\"Medical
+        Center\",\"pluralName\":\"Medical Centers\",\"shortName\":\"Medical\",\"icon\":{\"prefix\":\"https:\\/\\/ss3.4sqi.net\\/img\\/categories_v2\\/building\\/medical_\",\"suffix\":\".png\"},\"primary\":true}]},\"likes\":{\"count\":0,\"groups\":[]},\"like\":false,\"isMayor\":false,\"photos\":{\"count\":0,\"items\":[]},\"posts\":{\"count\":0,\"textCount\":0},\"comments\":{\"count\":0},\"source\":{\"name\":\"Swarm
+        for iOS\",\"url\":\"https:\\/\\/www.swarmapp.com\"}},{\"id\":\"606ddf8abd7a97160b3d52db\",\"createdAt\":1617813386,\"type\":\"checkin\",\"timeZoneOffset\":-420,\"venue\":{\"id\":\"464d008cf964a520bb461fe3\",\"name\":\"Oregon
+        Convention Center\",\"location\":{\"address\":\"777 NE M L King Blvd\",\"crossStreet\":\"btwn
+        NE Holladay St & NE Lloyd Blvd\",\"lat\":45.52874933831439,\"lng\":-122.66310453414916,\"labeledLatLngs\":[{\"label\":\"display\",\"lat\":45.52874933831439,\"lng\":-122.66310453414916}],\"postalCode\":\"97232\",\"cc\":\"US\",\"city\":\"Portland\",\"state\":\"OR\",\"country\":\"United
+        States\",\"formattedAddress\":[\"777 NE M L King Blvd (btwn NE Holladay St
+        & NE Lloyd Blvd)\",\"Portland, OR 97232\"]},\"categories\":[{\"id\":\"4bf58dd8d48988d1ff931735\",\"name\":\"Convention
+        Center\",\"pluralName\":\"Convention Centers\",\"shortName\":\"Convention
+        Center\",\"icon\":{\"prefix\":\"https:\\/\\/ss3.4sqi.net\\/img\\/categories_v2\\/building\\/conventioncenter_\",\"suffix\":\".png\"},\"primary\":true}],\"venuePage\":{\"id\":\"59950001\"}},\"likes\":{\"count\":0,\"groups\":[]},\"like\":false,\"isMayor\":false,\"photos\":{\"count\":0,\"items\":[]},\"posts\":{\"count\":0,\"textCount\":0},\"comments\":{\"count\":0},\"source\":{\"name\":\"Swarm
+        for iOS\",\"url\":\"https:\\/\\/www.swarmapp.com\"}},{\"id\":\"600c7df465a99a20cad1416d\",\"createdAt\":1611431412,\"type\":\"checkin\",\"timeZoneOffset\":-480,\"venue\":{\"id\":\"5c0306eb724750002c4c77ef\",\"name\":\"Matta\",\"location\":{\"address\":\"4311
+        NE Prescott St\",\"crossStreet\":\"NE 42nd Ave\",\"lat\":45.55577074453261,\"lng\":-122.61910671889798,\"labeledLatLngs\":[{\"label\":\"display\",\"lat\":45.55577074453261,\"lng\":-122.61910671889798}],\"postalCode\":\"97218\",\"cc\":\"US\",\"neighborhood\":\"Cully\",\"city\":\"Portland\",\"state\":\"OR\",\"country\":\"United
+        States\",\"formattedAddress\":[\"4311 NE Prescott St (NE 42nd Ave)\",\"Portland,
+        OR 97218\"]},\"categories\":[{\"id\":\"4bf58dd8d48988d1cb941735\",\"name\":\"Food
+        Truck\",\"pluralName\":\"Food Trucks\",\"shortName\":\"Food Truck\",\"icon\":{\"prefix\":\"https:\\/\\/ss3.4sqi.net\\/img\\/categories_v2\\/food\\/streetfood_\",\"suffix\":\".png\"},\"primary\":true}],\"delivery\":{\"id\":\"2659613\",\"url\":\"https:\\/\\/www.grubhub.com\\/restaurant\\/matta-4311-northeast-prescott-street-portland\\/2659613?affiliate=1131&utm_source=foursquare-affiliate-network&utm_medium=affiliate&utm_campaign=1131&utm_content=2659613\",\"provider\":{\"name\":\"grubhub\",\"icon\":{\"prefix\":\"https:\\/\\/fastly.4sqi.net\\/img\\/general\\/cap\\/\",\"sizes\":[40,50],\"name\":\"\\/delivery_provider_grubhub_20180129.png\"}}}},\"likes\":{\"count\":0,\"groups\":[]},\"like\":false,\"sticker\":{\"id\":\"5963b5ddbab2f604cf80049d\",\"name\":\"Wheels\",\"image\":{\"prefix\":\"https:\\/\\/igx.4sqi.net\\/img\\/sticker\\/\",\"sizes\":[60,94,150,300],\"name\":\"\\/FoodTrucks_72e4dd.png\"},\"stickerType\":\"unlockable\",\"group\":{\"name\":\"collectible\",\"index\":240},\"pickerPosition\":{\"page\":10,\"index\":0},\"teaseText\":\"Check
+        in at food trucks to unlock this sticker.\",\"unlockText\":\"Getting your
+        grub on the go? Nothing beats street meat.\"},\"isMayor\":false,\"photos\":{\"count\":0,\"items\":[]},\"posts\":{\"count\":0,\"textCount\":0},\"comments\":{\"count\":0},\"source\":{\"name\":\"Swarm
+        for iOS\",\"url\":\"https:\\/\\/www.swarmapp.com\"}},{\"id\":\"600c7c2bc09d8504f62b4c0b\",\"createdAt\":1611430955,\"type\":\"checkin\",\"timeZoneOffset\":-480,\"venue\":{\"id\":\"593de542d48ec17c5aa941aa\",\"name\":\"Proud
+        Mary\",\"location\":{\"address\":\"2012 NE Alberta St\",\"lat\":45.558976195574004,\"lng\":-122.64449699865911,\"labeledLatLngs\":[{\"label\":\"display\",\"lat\":45.558976195574004,\"lng\":-122.64449699865911},{\"label\":\"entrance\",\"lat\":45.558994,\"lng\":-122.644525}],\"postalCode\":\"97211\",\"cc\":\"US\",\"city\":\"Portland\",\"state\":\"OR\",\"country\":\"United
+        States\",\"formattedAddress\":[\"2012 NE Alberta St\",\"Portland, OR 97211\"]},\"categories\":[{\"id\":\"4bf58dd8d48988d1e0931735\",\"name\":\"Coffee
+        Shop\",\"pluralName\":\"Coffee Shops\",\"shortName\":\"Coffee Shop\",\"icon\":{\"prefix\":\"https:\\/\\/ss3.4sqi.net\\/img\\/categories_v2\\/food\\/coffeeshop_\",\"suffix\":\".png\"},\"primary\":true}]},\"likes\":{\"count\":0,\"groups\":[]},\"like\":false,\"sticker\":{\"id\":\"52a659800000000000000006\",\"name\":\"Joey
+        Beans\",\"image\":{\"prefix\":\"https:\\/\\/igx.4sqi.net\\/img\\/sticker\\/\",\"sizes\":[60,94,150,300],\"name\":\"\\/coffee_f4b66b.png\"},\"stickerType\":\"unlockable\",\"group\":{\"name\":\"collectible\",\"index\":8},\"pickerPosition\":{\"page\":0,\"index\":8},\"teaseText\":\"Check
+        in at coffee shops to unlock this sticker.\",\"unlockText\":\"Who cares if
+        your flat white just cost ya $10 bucks. You're getting free wi-fi! Free, extremely
+        slow wi-fi. Drink it up.\",\"bonusText\":\"Use at Coffee Shops for a bonus.\",\"points\":2,\"bonusStatus\":\"Use
+        once per week. Recharges Sunday at midnight.\"},\"isMayor\":false,\"photos\":{\"count\":0,\"items\":[]},\"posts\":{\"count\":0,\"textCount\":0},\"comments\":{\"count\":0},\"source\":{\"name\":\"Swarm
+        for iOS\",\"url\":\"https:\\/\\/www.swarmapp.com\"}},{\"id\":\"600c6b3311a9f418c2f8c330\",\"createdAt\":1611426611,\"type\":\"checkin\",\"timeZoneOffset\":-480,\"venue\":{\"id\":\"5b7d8fc7aa6c95002c7628f7\",\"name\":\"Quest
+        Diagnostics\",\"location\":{\"address\":\"2351 NW Westover Rd Ste R250\",\"lat\":45.524635,\"lng\":-122.70062,\"labeledLatLngs\":[{\"label\":\"display\",\"lat\":45.524635,\"lng\":-122.70062}],\"postalCode\":\"97210\",\"cc\":\"US\",\"city\":\"Portland\",\"state\":\"OR\",\"country\":\"United
+        States\",\"formattedAddress\":[\"2351 NW Westover Rd Ste R250\",\"Portland,
+        OR 97210\"]},\"categories\":[{\"id\":\"4f4531b14b9074f6e4fb0103\",\"name\":\"Medical
+        Lab\",\"pluralName\":\"Medical Labs\",\"shortName\":\"Medical Lab\",\"icon\":{\"prefix\":\"https:\\/\\/ss3.4sqi.net\\/img\\/categories_v2\\/education\\/lab_\",\"suffix\":\".png\"},\"primary\":true}]},\"likes\":{\"count\":0,\"groups\":[]},\"like\":false,\"isMayor\":false,\"photos\":{\"count\":0,\"items\":[]},\"posts\":{\"count\":0,\"textCount\":0},\"comments\":{\"count\":0},\"source\":{\"name\":\"Swarm
+        for iOS\",\"url\":\"https:\\/\\/www.swarmapp.com\"}}]}}}"
+  recorded_at: Fri, 04 Jun 2021 20:44:12 GMT
+recorded_with: VCR 6.0.0

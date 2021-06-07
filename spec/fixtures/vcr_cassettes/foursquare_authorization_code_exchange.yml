@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://foursquare.com/oauth2/access_token?client_id=FOURSQUARE_CLIENT_ID&client_secret=FOURSQUARE_CLIENT_SECRET&code=FOURSQUARE_AUTHORIZATION_CODE&grant_type=authorization_code&redirect_uri=http://test.host/oauth/foursquare/callback
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - foursquare.com
+      User-Agent:
+      - http.rb/4.4.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '67'
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - Fri, 4 Jun 2021 20:21:47 GMT
+      Cache-Control:
+      - no-cache, private, no-store
+      Pragma:
+      - no-cache
+      X-Rate-Limit-Key:
+      - 76.115.47.28
+      X-Ex:
+      - fastly_cdn
+      Log-Origin:
+      - name=F_Host_1
+      Fastly-Restarts:
+      - '1'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Fri, 04 Jun 2021 20:21:47 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-pdx12324-PDX
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding,User-Agent,Accept-Language
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"FOURSQUARE_API_TOKEN"}'
+  recorded_at: Fri, 04 Jun 2021 20:21:47 GMT
+recorded_with: VCR 6.0.0

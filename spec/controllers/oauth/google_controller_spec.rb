@@ -69,13 +69,13 @@ RSpec.describe OAuth::GoogleController, type: :controller do
         expect(flash[:error]).not_to be_present
 
         user.reload
-        expect(user.google_calendar_id).to eq('c_23vircoo1kib3tu872gubgu4v8@group.calendar.google.com')
+        expect(user.google_calendar_id).to eq('GOOGLE_CALENDAR_ID')
         expect(SyncCheckInsWorker.jobs.size).to eq(1)
       end
 
       context 'that already has a calendar and is logging in again' do
         before do
-          user.update!(google_calendar_id: 'c_23vircoo1kib3tu872gubgu4v8@group.calendar.google.com')
+          user.update!(google_calendar_id: 'GOOGLE_CALENDAR_ID')
         end
 
         it 'does not attempt to create a new calendar' do
