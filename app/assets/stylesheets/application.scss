@@ -24,3 +24,44 @@
 }
 
 .wobble { -webkit-animation: wobble 3s infinite; }
+
+$foursquare-light-base: #2d5be3;
+$foursquare-light-hover: darken($foursquare-light-base, 10%);
+$foursquare-dark-base: #2d5be3;
+$foursquare-dark-hover: lighten($foursquare-light-base, 10%);
+
+$google-light-base: #ffffff;
+$google-light-hover: darken($google-light-base, 10%);
+$google-dark-base: #4285f4;
+$google-dark-hover: lighten($google-dark-base, 10%);
+
+.btn-foursquare {
+  background-color: $foursquare-light-base;
+  border-color: $foursquare-light-base;
+
+  &:hover {
+    background-color: $foursquare-light-hover;
+    border-color: $foursquare-light-hover;
+  }
+}
+
+.btn-google {
+  background-color: $google-light-base;
+  border-color: #6c757d;
+  color: #6c757d;
+
+  &:hover {
+    background-color: $google-light-hover;
+    border-color: #6c757d;
+    color: #6c757d;
+  }
+}
+
+// Make the Google icon rainbow
+.fa-google {
+  background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
