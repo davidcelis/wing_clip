@@ -15,12 +15,12 @@ RSpec.describe PollFoursquareWorker, type: :worker do
   before do
     # Create the last check-in; we'll assert we created everything after it
     user.check_ins.create!(
-      foursquare_id: '5fea5ffd7acccf2dda2ea304',
-      venue: 'The Knoll Open Space',
-      address: 'Lincoln City, OR',
-      coordinates: [45.017845, -124.00157],
+      foursquare_id: '600c6b3311a9f418c2f8c330',
+      venue: 'Quest Diagnostics',
+      address: '2351 NW Westover Rd Ste R250, Portland, OR 97210',
+      coordinates: [45.524635, -122.70062],
       category_id: '4bf58dd8d48988d163941735',
-      created_at: Time.at(1609195517),
+      created_at: Time.at(1611426611),
     )
   end
 
@@ -30,7 +30,7 @@ RSpec.describe PollFoursquareWorker, type: :worker do
         worker.perform(user.id)
       }.to change {
         CheckIn.count
-      }.by(249)
+      }.by(4)
     end
   end
 

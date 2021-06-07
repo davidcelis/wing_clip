@@ -27,7 +27,7 @@ RSpec.describe Foursquare::Client do
     VCR.use_cassette('foursquare_list_check_ins', match_requests_on: [:method, VCR.request_matchers.uri_without_param(:beforeTimestamp)]) do
       check_ins = client.check_ins
 
-      expect(check_ins.size).to eq(250)
+      expect(check_ins.size).to eq(5)
       expect(check_ins).to all(be_a(Foursquare::CheckIn))
     end
   end

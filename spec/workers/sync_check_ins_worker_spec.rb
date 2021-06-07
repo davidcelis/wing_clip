@@ -31,7 +31,7 @@ RSpec.describe SyncCheckInsWorker, type: :worker do
         worker.perform(user.id, 1617813407)
       }.to change {
         CheckIn.count
-      }.by(249)
+      }.by(4)
     end
   end
 
