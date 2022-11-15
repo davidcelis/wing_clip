@@ -2,6 +2,10 @@
 
 In the olden days, Foursquare provided each user with a "Check-in Feed" URL, which would allow them to subscribe to their check-ins using their calendar application of choice. This feature was a great way to be able to look back on any day from your calendar and see where you were and remember what you were doing. Eventually, support for the feature died out. IFTTT has provided some level of alternative, but it only works with check-ins that are created after you set up the integration. WingClip is an alternative that can sync your entire check-in history—past, present, and future—to your Google calendar.
 
+### Note
+
+WingClip is no longer publicly usable or maintained. This is probably fine, because nobody ever signed up except for me 🥲
+
 ## Setup
 
 WingClip requires several dependencies to be installed before the application itself can be set up and run:
